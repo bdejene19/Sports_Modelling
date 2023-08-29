@@ -1,5 +1,5 @@
 class Coach:
-    def __init__(self, name: str, team: str, playStyle: str,) -> None:
+    def __init__(self, name: str, team: str, playStyle: str):
         self.name = name
         self.team = team
         self.playStyle = playStyle
