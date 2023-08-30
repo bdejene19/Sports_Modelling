@@ -1,11 +1,13 @@
 import array
 from ctypes import Array
+from footballstats.server.classes.History import TeamHistory
 from server.classes.Coach import Coach
 from server.classes.Player import PositionPlayer
 
 
-class Team:
-    def __init__(self, name: str, league: str, coach: Coach, squad: array(PositionPlayer)):
+class Team(TeamHistory):
+    def __init__(self, history: str, name: str, league: str, coach: Coach, squad: array(PositionPlayer)):
+        super().__init__(history)
         self.name = name
         self.league = league
         self.coach = coach

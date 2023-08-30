@@ -1,8 +1,14 @@
-class Coach:
-    def __init__(self, name: str, team: str, playStyle: str):
+from array import array
+from footballstats.server.classes.History import CoachHistory
+
+
+class Coach(CoachHistory):
+    def __init__(self, history: str, winRecord: array, goalRecord: array, name: str, team: str, playStyle: str, record: dict):
+        super().__init__(history, winRecord, goalRecord)
         self.name = name
         self.team = team
         self.playStyle = playStyle
+        self.coachingHistory = record
 
     def getName(self):
         return self.name
